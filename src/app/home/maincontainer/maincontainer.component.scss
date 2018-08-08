@@ -1,0 +1,181 @@
+@import "./src/assets/styles/params";
+@import "./src/assets/styles/common";
+
+.carousel-indicators li
+{
+    border:1px solid #000;
+}
+.carousel-indicators .active {
+   
+    background-color: $primaryColor;
+}
+.borderproduct{
+    border:1px solid $primaryColor;
+    border-radius: 10px;
+    /* margin:5px; */
+}
+.carousel-control{
+    width: 10%;
+}
+/* #newProductCar .carousel-control.left {
+    right: 38px;
+    left: auto;
+}
+#newProductCar .carousel-control.right {
+    right: 8px;
+    left: auto;
+}
+#newProductCar .carousel-control {
+    position: absolute;
+    top: -48px;
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    background: #FFA300;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.form-group .thumbnails {
+    margin-left: 0;
+}
+.thumbnails {
+    margin-left: -20px;
+    list-style: none;
+    *zoom: 1;
+}
+.thumbnails > li {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.form-group [class*="span"]:first-child {
+    margin-left: 0;
+}
+.form-group .col-md-3 {
+    width: 23.404255319148934%;
+    *width: 23.351063829787233%;
+}
+.form-group [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.127659574468085%;
+    *margin-left: 2.074468085106383%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.thumbnail {
+    position: relative;
+}
+.thumbnail {
+    background: #fff;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.thumbnail > a.overlay, .thumbnail > a.zoomTool {
+    display: none;
+}
+.thumbnail > a {
+    display: block;
+    text-align: center;
+}
+.zoomTool {
+    width: 120px;
+    height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    background: #f89406;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    margin-left: -60px;
+    z-index: 999;
+    display: none;
+}
+a [class^="icon-"], a [class*=" icon-"] {
+    display: inline;
+}
+[class^="icon-"], [class*=" icon-"] {
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    margin-top: 0;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    *margin-right: .3em;
+}
+.icon-search {
+    background-position: -48px 0;
+}
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("../img/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+.thumbnail > a {
+    text-align: center;
+}
+.tag {
+    background: url(assets/img/new.png) no-repeat 0 0;
+    position: absolute;
+    display: block;
+    top: -4px;
+    right: -18px;
+    height: 48px;
+    width: 48px;
+}
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+.thumbnail > a {
+    display: block;
+    text-align: center;
+}
+.thumbnail img {
+    max-width: 100%;
+} */

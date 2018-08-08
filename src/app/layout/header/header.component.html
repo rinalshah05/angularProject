@@ -1,0 +1,58 @@
+<!-- Main Header -->
+<header class="main-header">
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <!-- <span class="logo-mini">
+            <b>B</b>S</span> -->
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">
+            <b>Bombay</b>Studioo</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-left">
+            <ul class="nav navbar-nav">
+                <li class="dropdown tasks-menu" *ngIf="isAuthenticated">
+                    <a routerLink="admin/products" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown search">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <input type="text" placeholder="Search for a brand or product…" [(ngModel)]="inputModelSearch">
+                        <button>
+                            <i class="fa fa-search text-aqua"></i>
+                        </button>
+                    </a>
+                </li>
+                <li class="dropdown tasks-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="dropdown tasks-menu" *ngIf="isAuthenticated">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-shopping-cart">sd</i>
+                    </a>
+                </li>
+                <li class="dropdown user user-menu">
+                    <a routerLink="auth/sign-in" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user-circle"></i>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--Main Header-->

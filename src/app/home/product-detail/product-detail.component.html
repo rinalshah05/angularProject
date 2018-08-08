@@ -1,0 +1,129 @@
+<!-- <p>
+  product-detail works! {{id}}
+</p> -->
+
+<div class="main-wrapper">
+  <div class="product-box" *ngIf="product">
+    <div class="product-preview">
+      <div id="productDetailCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#productDetailCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#productDetailCarousel" data-slide-to="1"></li>
+          <li data-target="#productDetailCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="../../../assets/img/avatar04.png" alt="Los Angeles">
+          </div>
+          <div class="item">
+            <img src="../../../assets/img/avatar.png" alt="Chicago">
+          </div>
+          <div class="item">
+            <img src="../../../assets/img/avatar2.png" alt="New York">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#productDetailCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#productDetailCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- <ui-photo-carousel [photos]="product.photos"></ui-photo-carousel> -->
+      <div>
+        <h4>Description</h4>
+        <p> ‘Florence’ midi dress from premium Australian label, Bec & Bridge. Forming a fluid bodycon fit, the sleeveless dress
+          is made from a mid-weight bonded crêpe with a hint of stretch and subtle darts at the bodice for a contour-skimming
+          silhouette. Slim satin shoulder straps feature with cross-over detailing to the rear and a low back design. Falling
+          to just below the knee with a straight hem. Lined.</p>
+        <p>95% Polyester, 5% Elastane</p>
+        <p>Made in Australia</p>
+        <p>Model is 173cm/5'8" and wears a size UK 8.</p>
+      </div>
+      <div>
+        <h4>Product Details</h4>
+        <table cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <th>
+                Brand:
+              </th>
+              <td>
+                Bec &amp; Bridge
+              </td>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <th>
+                Colour:
+              </th>
+              <td>
+                Blue
+              </td>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <th>
+                Material:
+              </th>
+              <td>
+                95% Polyester, 5% Elastane
+              </td>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="title">
+        <h3> {{ product.Name }}</h3>
+      </div>
+      <div class="sub-title"> {{ product.ShortDescription }}</div>
+      <div class="price-box">
+        <div class="price">
+          {{ product.Price }} Rs.
+        </div>
+      </div>
+      <div class="color-box">
+        <p>Select color</p>
+        <div *ngFor="let color of colorsList;let idx = index">
+          <input type="radio" name="radiogroup" [checked]="idx === 0" [value]="color" (change)="onColorSelectionChange(color)">
+          <button [type]="'color'" [style.background]="color"></button>
+        </div>
+
+      </div>
+      <div class="size-box">
+        <p>Select size</p>
+        <div *ngFor="let size of sizeList;let idx = index">
+          <div>
+            <input type="radio" name="radiogroup1" [checked]="idx === 0" [value]="size" (change)="onSizeSelectionChange(size)" >&nbsp;&nbsp;{{size}}
+            
+          </div>
+        </div>
+        <!-- <button  [type]="'size'" [(ngModel)]="size" [value]="'xs'">XS</button>
+        <button  [type]="'size'"  [(ngModel)]="size" [value]="'s'">S</button>
+        <button [type]="'size'"  [(ngModel)]="size" [value]="'m'">M</button>
+        <button [type]="'size'"  [(ngModel)]="size" [value]="'l'">L</button>
+        <button  [type]="'size'" [(ngModel)]="size" [value]="'xl'">XL</button> -->
+      </div>
+      <!-- <div class="quantity">
+        <ui-qt-input [ngModel]="4"></ui-qt-input>
+      </div> -->
+      <button class="add">
+        <span class="fa fa-shopping-cart"></span>Add to cart</button>
+      <div>
+        <h4>Delivery Information</h4>
+        <p>UK next day delivery available until 9pm plus over 160 countries shipped to worldwide.</p>
+      </div>
+      <div>
+        <h4>Returns Policy</h4>
+        <p>We are confident that you will be happy with your purchase. However, if you are not satisfied you can return your
+          item for a full refund.</p>
+      </div>
+    </div>
+  </div>
+
+</div>

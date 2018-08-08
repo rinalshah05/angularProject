@@ -1,0 +1,127 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <p *ngIf="productId; else create">
+      Update Product for Id: {{productId}}
+    </p>
+    <ng-template #create>
+      <p> Create New Product </p>
+    </ng-template>
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <form class="example-container" [formGroup]="productForm" enctype="multipart/form-data">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <input formControlName="Name" matInput placeholder="Enter Name*">
+            <show-errors [control]="productForm.controls.Name"></show-errors>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <input formControlName="Price" matInput placeholder="Enter Price*">
+            <show-errors [control]="productForm.controls.Price"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <mat-form-field class="full-width">
+            <textarea formControlName="ShortDescription" matInput placeholder="Enter ShortDescription"></textarea>
+            <show-errors [control]="productForm.controls.ShortDescription"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <mat-form-field class="full-width">
+            <textarea formControlName="Description" matInput placeholder="Enter Description"></textarea>
+            <show-errors [control]="productForm.controls.Description"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <mat-select formControlName="SizeList" multiple placeholder="Available Sizes*">
+              <mat-option *ngFor="let sizes of sizeList" [value]="sizes">
+                {{sizes}}
+              </mat-option>
+            </mat-select>
+            <show-errors [control]="productForm.controls.SizeList"></show-errors>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <input formControlName="Brand" matInput placeholder="Enter Brand*">
+            <show-errors [control]="productForm.controls.Brand"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <mat-select formControlName="Colors" multiple placeholder="Available Colors*">
+              <mat-option *ngFor="let color of colorsList" [value]="color.Name">
+                <svg width="30" height="30">
+                  <rect width="30" height="30" [attr.fill]="color.ColorCode" style="stroke-width:3;stroke:rgb(0,0,0)" />
+                </svg> {{color.Name}}
+              </mat-option>
+            </mat-select>
+            <show-errors [control]="productForm.controls.Colors"></show-errors>
+          </mat-form-field>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <mat-select formControlName="CategoryId" placeholder="Select Category*">
+              <mat-option *ngFor="let category of categoryList" [value]="category.Id">
+                {{category.Name}}
+              </mat-option>
+            </mat-select>
+            <show-errors [control]="productForm.controls.CategoryId"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <mat-select formControlName="SuitableForList" multiple placeholder="Suitable For*">
+              <mat-option *ngFor="let sizes of suitableForList" [value]="sizes">
+                {{sizes}}
+              </mat-option>
+            </mat-select>
+            <show-errors [control]="productForm.controls.SuitableForList"></show-errors>
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <mat-form-field class="full-width">
+            <input formControlName="ResellerPrice" matInput placeholder="Enter Reseller Price*">
+            <show-errors [control]="productForm.controls.ResellerPrice"></show-errors>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="button-row">
+          <label>Product Banner</label>&nbsp;&nbsp;&nbsp;
+          <button mat-button color="accent" mat-mini-fab (click)="imgFileInput.click()">
+            <mat-icon>attachment</mat-icon>
+          </button>
+          <input style="display: none" type="file" name="Files" #imgFileInput (change)="onProductBannerFileChangeEvent($event)" />
+          <div *ngIf="productBannerFileToUpload">
+            {{productBannerFileToUpload.name}}
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="clearfix"></div>
+      <br>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" [disabled]="!productForm.valid" #closeAddExpenseModal data-dismiss="modal"
+          (click)="onProductFormSubmit()">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <br/>
+</div>

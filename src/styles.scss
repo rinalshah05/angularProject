@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+ //@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+ @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+ .mat-error {
+  font-size:14px;
+}
+.skin-blue .wrapper{
+    background-color: #fff !important;
+}
+table {
+    width: 100%;
+  }
+  td, th {
+    width: 25%;
+  }
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+hr{
+border-top: 1px solid #3c8dbc;  
+}
+h3,p{
+    padding-left:10px; 
+}
+.modal-header h5 {
+    display: inline;
+}
+.jumbotron{
+    padding: 0;
+}
+.jumbotron .container{
+    width: 100%;
+}
+.tableimg{
+    height: 100px;
+    width:150px;
+    border-radius: 50%;
+    margin:10px;
+  }
+  hr.soften {
+    margin: 8px 0;
+    background: #DDD;
+}
+.cdk-overlay-container{
+    z-index: 9999 !important;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-label{
+    font-size: 14px;
+}
+.mat-error{
+    font-size: 12px !important;
+}
+.outlet[_ngcontent-c0] {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+  
